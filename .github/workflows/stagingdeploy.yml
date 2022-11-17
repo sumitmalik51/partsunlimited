@@ -27,8 +27,8 @@ jobs:
       # Run dotnet build and publish
       - name: dotnet build and publish
         run: |
-          dotnet build PartsUnlimited.sln --configuration Release
-          dotnet publish PartsUnlimited.sln -c Release -o partsunlimitedweb
+          dotnet build PartsUnlimitedWebsite.csproj --configuration Release
+          dotnet publish PartsUnlimitedWebsite.csproj -c Release -o partsunlimitedweb
           
       # Deploy to Azure Web app slot
       - name: 'Run Azure webapp deploy action using publish profile credentials'
