@@ -27,6 +27,7 @@ jobs:
       # Run dotnet build and publish
       - name: dotnet build and publish
         run: |
+          nvm use 10
           dotnet build PartsUnlimited.sln --configuration Release
           dotnet publish PartsUnlimited.sln -c Release -o partsunlimitedweb
           
